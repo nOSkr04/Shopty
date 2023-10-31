@@ -10,7 +10,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 const ProductCard = memo(() => {
     const theme = useColorScheme();
 
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     const border = useCallback(() => {
         return {
@@ -22,11 +22,9 @@ const ProductCard = memo(() => {
         <View style={[styles.container, border()]}>
             <View style={styles.img} />
             <View style={styles.h15} />
-            <ScrollView style={styles.descriptionContainer}>
-                <MonThin>
+                <MonThin numberOfLines={3}>
                     asdf asdf asdf asdf asdf asdf asdfasdf asdf asdfas df a
                 </MonThin>
-            </ScrollView>
             <View style={styles.h15} />
             <MonThin style={styles.title}>asdf</MonThin>
             <View style={styles.h15} />
@@ -48,9 +46,7 @@ ProductCard.displayName = "ProductCard"
 export { ProductCard }
 
 const styles = StyleSheet.create({
-    descriptionContainer: {
-        height: 75,
-    },
+
     container: {
         flex: 1,
         height: 310,
@@ -58,6 +54,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 20,
         marginBottom: 15,
+        
     },
     idContainer: {
         height: 36,

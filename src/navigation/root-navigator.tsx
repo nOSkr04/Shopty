@@ -6,7 +6,6 @@ import { IAuth } from "../interface/auth";
 import { useSWRToken } from "../hooks/use-swr-token";
 import { authMe } from "../store/auth-slice";
 import { AuthApi } from "../api";
-
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { LoginScreen } from "../screen/auth/login-screen";
 

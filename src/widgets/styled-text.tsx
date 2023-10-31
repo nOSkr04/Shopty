@@ -18,6 +18,7 @@ export function NunitoBoldIt(props: TextProps) {
 }
 
 
+
 const styles = StyleSheet.create({
   MonBold: {
     fontFamily: "MonBold",

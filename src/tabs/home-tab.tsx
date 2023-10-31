@@ -89,15 +89,13 @@ const HomeTab = memo(() => {
           </TouchableOpacity>
         </View>
         <View style={styles.h15} />
-        <Flatlist renderItem={renderProduct} showsVerticalScrollIndicator={false} data={data} numColumns={2} columnWrapperStyle={styles.productContainer} />
-        <View style={styles.h15} />
       </>
     )
   }, [])
 
   const renderMainItem = useCallback(() => {
     return (
-      <></>
+      <ProductCard />
     )
   }, [])
 
@@ -112,7 +110,7 @@ const HomeTab = memo(() => {
           <Feather size={18} color={colors[theme].text} name='shopping-bag' />
         </TouchableOpacity>
       } title='Home' />
-      <Flatlist ListHeaderComponent={renderHeader} data={[]} renderItem={renderMainItem} style={styles.container} />
+      <Flatlist ListHeaderComponent={renderHeader} data={data} renderItem={renderMainItem} style={styles.container}   numColumns={2} columnWrapperStyle={styles.productContainer}    />
     </>
   )
 })
@@ -128,7 +126,7 @@ const styles = StyleSheet.create({
   h40: {
     height: 40,
   },
-  productContainer:{
+  productContainer: {
     gap: 20,
     marginHorizontal: 25,
   },
