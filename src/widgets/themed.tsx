@@ -3,7 +3,7 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import {  KeyboardAvoidingView as DefaultKeyboardAvoidingView, ScrollView as DefaultScrollView, Text as DefaultText, TextInput as DefaultTextInput, View as DefaultView } from "react-native";
+import {  KeyboardAvoidingView as DefaultKeyboardAvoidingView, ScrollView as DefaultScrollView, Text as DefaultText, TextInput as DefaultTextInput, View as DefaultView, FlatList as DefaultFlatList } from "react-native";
 import React from "react";
 import Colors from "../constants/colors";
 import useColorScheme from "../hooks/use-color-scheme";
@@ -31,6 +31,8 @@ export type ViewProps = ThemeProps & DefaultView["props"];
 export type TextInputProps = ThemeProps & DefaultTextInput["props"];
 export type KeyboardAvoidingViewProps = ThemeProps & DefaultKeyboardAvoidingView["props"];
 export type ScrollViewProps = ThemeProps & DefaultScrollView["props"];
+export type FlatlistViewProps = ThemeProps & DefaultFlatList["props"];
+
 
 export function Text(props: TextProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
@@ -66,4 +68,12 @@ export function ScrollView(props: ScrollViewProps) {
 
   return <DefaultScrollView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+export function Flatlist(props: FlatlistViewProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, "background");
+
+  return <DefaultFlatList style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+
 

@@ -11,7 +11,9 @@ export default {
     tint           : tintColorLight,
     tabIconDefault : "#ccc",
     tabIconSelected: tintColorLight,
-    transparent    : "transparent"
+    transparent    : "transparent",
+    border         : '#C4C4C4',
+    darkBorder     : "#000",
   },
   dark: {
     text           : "#fff",
@@ -20,7 +22,8 @@ export default {
     tint           : tintColorDark,
     tabIconDefault : "#ccc",
     tabIconSelected: tintColorDark,
-    transparent    : "transparent"
-   
+    transparent    : "transparent",
+    border         : '#C4C4C4',
+    darkBorder     : "#fff",
   },
 };

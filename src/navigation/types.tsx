@@ -13,6 +13,8 @@ export enum NavigationRoutes {
   RootNavigator = "RootStackNavigator",
   // Tabs
   HomeTab = "HomeTab",
+  WishListTab = "WishListTab",
+  CategoriesTab = "CategoriesTab",
   // Screens
   LoginScreen = "LoginScreen",
   SignUpScreen = "SignUpScreen",
@@ -28,6 +30,8 @@ export type RootStackParamList = {
 
 export type RootTabParamList = {
   HomeTab: undefined;
+  WishListTab: undefined;
+  CategoriesTab: undefined;
 };
 
 export type BottomSheetParamList = {
