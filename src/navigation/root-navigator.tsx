@@ -29,18 +29,17 @@ function RootNavigator() {
     },
   );
 
-  if (isInitialLoading) {
-    return null;
-  }
+  // if (isInitialLoading) {
+  //   return null;
+  // }
 
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
       }}>
-      {user ? (
+      {/* {user ? (
         <>
-        {/* in user */}
           <Stack.Screen component={BottomTabNavigator} name={NavigationRoutes.Root} />
           <Stack.Screen component={LoginScreen} name={NavigationRoutes.LoginScreen} />
         </>
@@ -49,7 +48,9 @@ function RootNavigator() {
          <Stack.Screen component={BottomTabNavigator} name={NavigationRoutes.Root} />
           <Stack.Screen component={LoginScreen} name={NavigationRoutes.LoginScreen} />
         </>
-      )}
+      )} */}
+        <Stack.Screen component={BottomTabNavigator} name={NavigationRoutes.Root} />
+          {/* <Stack.Screen component={LoginScreen} name={NavigationRoutes.LoginScreen} /> */}
     </Stack.Navigator>
   );
 }

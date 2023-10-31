@@ -4,7 +4,7 @@ import { authLogout } from "../store/auth-slice";
 
 export class HttpRequest extends BaseHttpRequest {
   
-  uri = "https://seduback.com/api/v1";
+  uri = "http://192.168.1.8:8001";
   store = store;
   errorHandler = (statusCode: number, error: HttpHandler): void => {
     if(statusCode === 401){
